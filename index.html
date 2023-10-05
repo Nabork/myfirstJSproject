@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new JS project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="pro">
+        <form action="#" onsubmit=" return noEmpty();">
+          <input type="text" id="box" placeholder="Enter your favorite color" />
+          <button id="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      var colorInput = document.getElementById("box");
+      var body = document.getElementsByTagName("body")[0];
+      var btn = document.getElementById("btn");
+
+      function noEmpty() {
+        body.style.backgroundColor = colorInput.value;
+        btn.style.color = colorInput.value;
+
+        if (colorInput.value === "") {
+          alert("Please Enter a Color");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
